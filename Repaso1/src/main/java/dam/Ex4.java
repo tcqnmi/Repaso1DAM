@@ -1,9 +1,9 @@
+
 package dam;
 
 import java.util.Scanner;
 
-public class Ex3 {
-    
+public class Ex4 {
     public static void main(String[] args) {
         
         Scanner teclado = new Scanner(System.in);
@@ -11,7 +11,7 @@ public class Ex3 {
         System.out.println("Altura: ...");
         int altura = Integer.parseInt(teclado.nextLine());
         
-        for (int i = 1; i <= altura; i++) {
+        for (int i = altura; i > 0; i--) {
             for (int j = 0; j < i; j++) {
                 System.out.printf("*");
             }
