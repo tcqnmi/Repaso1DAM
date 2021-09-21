@@ -25,7 +25,6 @@ public class Ex5 {
             for (int i = 0; i < altura; i++) {
                 int num = 1;
                 for (int j = altura; j >= i+1; j--) {
-                  
                     System.out.printf("%d",num);
                     num++;
                 }
