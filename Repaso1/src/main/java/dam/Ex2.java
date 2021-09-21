@@ -13,18 +13,18 @@ public class Ex2 {
         System.out.println("DNI: ...");
         
         dni = Integer.parseInt(teclado.nextLine());
-        letra= Averiguarletra(dni);
+        letra= averiguarLetra(dni);
         
         System.out.printf("El dni completo es: %d - %s",dni,letra);
         
         
     }
-    public static String Averiguarletra(int dni){
+    private static String averiguarLetra(int dni){
         String letra =" ";
         int posicion = 0;
-        
-        posicion = dni%23;
-        String  opciones [] = {"T","R","W","A","G","M","Y", "F","D","P","D","X","B","N", "J","Z","S","Q","V","H","L","C","K","E"};
+        String  opciones [] = {"T","R","W","A","G","M","Y", "F","P","D","X","B","N", "J","Z","S","Q","V","H","L","C","K","E"};
+
+        posicion = dni%23;                 
         letra = opciones[posicion];
         
         return letra; 
