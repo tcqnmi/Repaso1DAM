@@ -11,6 +11,12 @@ public class Butaca {
         this.fila = fila;
         this.columna = col;   
     }
+    
+    public Butaca(int fila, char col, Espectador e) {
+        this.fila = fila;
+        this.columna = col;   
+        this.espec = e;
+    }
 
     public int getFila() {
         return fila;
@@ -36,6 +42,14 @@ public class Butaca {
         this.espec = espec;
     }
     
-    
+    public boolean ocupado(){
+        
+        if (espec.getNombre() == null){
+             return false;
+
+        }else{
+            return true;
+        }       
+    }
     
 }
