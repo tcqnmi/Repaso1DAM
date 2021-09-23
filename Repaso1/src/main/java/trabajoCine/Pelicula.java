@@ -7,6 +7,11 @@ public class Pelicula {
     private int duracion = 0;
     private int edadMin = 0;
 
+    public Pelicula() {
+    }
+
+    
+    
     public Pelicula(String titulo, String director, int duracion, int edadMin) {
         this.titulo = titulo;
         this.director = director;
