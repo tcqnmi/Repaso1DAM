@@ -49,7 +49,7 @@ public class Espectador {
         return this.edad>=edad;
     }
     
-    public boolean tieneDinero(int cantidad){
+    public boolean tieneDinero(double cantidad){
         return this.dinero>=dinero;
     }
     
