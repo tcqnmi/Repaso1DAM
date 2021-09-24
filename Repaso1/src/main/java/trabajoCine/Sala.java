@@ -2,6 +2,7 @@
 package trabajoCine;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Sala {
     
@@ -17,7 +18,6 @@ public class Sala {
     }
     
     public void generarAsientos(int fil, int col){
-        
         
         char [] letra = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S'};
         for (int i = 0; i < fil; i++) {
@@ -60,6 +60,21 @@ public class Sala {
         }
         
         return true;
+    }
+    
+    public void sentar(Espectador e){
+        
+        Random rnd = new Random();
+        int pos = rnd.nextInt(asientos.size());
+        
+        if(sePuedeSentar(e)){
+            if(!asientos.get(pos).ocupado()){
+                asientos.get(pos).setEspectador(e);
+            }
+            
+        }
+        
+    
     }
     
     
