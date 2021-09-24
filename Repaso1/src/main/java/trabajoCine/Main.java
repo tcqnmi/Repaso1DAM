@@ -53,8 +53,9 @@ public class Main {
             if(!s1.haySitio()){
                 
                 s1.sentar(espectadores.get(k));
-                System.out.println("despues de sentar");
                 espectadores.get(k).pagar(precio);
+            }else{
+                System.out.println("No hay sitio");
             }            
         }
         
