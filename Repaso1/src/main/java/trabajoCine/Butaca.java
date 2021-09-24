@@ -5,7 +5,7 @@ public class Butaca {
     
     private int fila = 0;
     private char columna = ' ';
-    private Espectador espec = new Espectador();
+    private Espectador espec = new Espectador("vacío");
 
     public Butaca() {
     }

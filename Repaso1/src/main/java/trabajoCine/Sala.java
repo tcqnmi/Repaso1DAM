@@ -10,7 +10,7 @@ public class Sala {
     private double precio = 0;
     private Pelicula peli = new Pelicula();
 
-    public Sala(int fil, int col, double precio,Pelicula peli) {
+    public Sala(double precio,Pelicula peli) {
         
         this.precio = precio;
         this.peli= new Pelicula(peli);
@@ -29,10 +29,7 @@ public class Sala {
         
     }
     
-    /**
-     *
-     * @return
-     */
+    
     public boolean haySitio(){
        for (int i = 0; i < asientos.size(); i++) {
             if(asientos.get(i).ocupado()){
@@ -70,10 +67,13 @@ public class Sala {
         
         Random rnd = new Random();
         int pos = rnd.nextInt(asientos.size());
-        
+       
         if(sePuedeSentar(e)){
-            if(!asientos.get(pos).ocupado()){
+            if(asientos.get(pos).ocupado()){
                 asientos.get(pos).setEspec(e);
+                 
+                
+                
             }         
         }
           
@@ -85,7 +85,7 @@ public class Sala {
         for (int i = 0; i < asientos.size(); i++) {
             if(asientos.get(i).getFila() == fila && asientos.get(i).getColumna()== col){
                 posicion = i;
-                break;
+               
             }
         }
         return asientos.get(posicion);
