@@ -55,13 +55,7 @@ public class Sala {
     
     public boolean sePuedeSentar(Espectador e){
     
-        if(haySitio() && e.getEdad()>=peli.getEdadMin() && e.tieneDinero(this.precio)){
-            
-            return true;
-        
-        }
-        
-        return false;
+        return haySitio() && e.tieneEdad(peli.getEdadMin()) && e.tieneDinero(this.precio);
     }
     
     public void sentar(Espectador e){
