@@ -10,11 +10,6 @@ public class Espectador {
     private float dinero = 0;
 
     
-    
-    public Espectador(String nombre) {
-    
-    }
-    
     public Espectador(){
         Random rnd = new Random();
         String[] nombres = { "Andrea", "David", "Baldomero", "Balduino", "Baldwin", "Baltasar", "Barry", "Bartolo",

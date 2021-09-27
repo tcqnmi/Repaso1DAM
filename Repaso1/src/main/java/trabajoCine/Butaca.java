@@ -7,9 +7,7 @@ public class Butaca {
     private char columna = ' ';
     private Espectador espec;
 
-    public Butaca() {
-    }
-    
+  
     public Butaca(int fila, char col) {
         this.fila = fila;
         this.columna = col;   

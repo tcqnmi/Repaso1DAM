@@ -63,7 +63,9 @@ public class Sala {
         Random rnd = new Random();
         int pos = rnd.nextInt(asientos.size());
         if(!asientos.get(pos).ocupado()){
-            asientos.get(pos).setEspec(espectador);   
+            asientos.get(pos).setEspec(espectador);
+            System.out.printf("---> Hemos sentado a %s en la butaca %d-%c \n",
+                    espectador.getNombre(), asientos.get(pos).getFila(), asientos.get(pos).getColumna());
             espectador.pagar(this.precio);
         }
     }

@@ -33,10 +33,10 @@ public class Main {
         System.out.println("Precio de la película: ...");
         double precio = Double.parseDouble(teclado.nextLine()); 
         
-        Sala s1 = new Sala(precio, peli);
+        Sala sala1 = new Sala(precio, peli);
         System.out.println("\t> Clase Sala | Método constructor| Creación de la sala");
 
-        s1.generarAsientos(i,j);
+        sala1.generarAsientos(i,j);
         System.out.println("\t> Clase Sala | Método generarAsientos| Crea tantos objetos butaca como hayamos"
                 + "indicado por pantalla, les da parámetros de fila(int) y columna(char)");
 
@@ -45,25 +45,27 @@ public class Main {
         int nEspec = Integer.parseInt(teclado.nextLine());
         
         ArrayList <Espectador> espectadores = new ArrayList<Espectador>();
+        
         for (int k = 0; k < nEspec; k++) {
            
-            Espectador e = new Espectador();
-            espectadores.add(e);
+            Espectador espectador1 = new Espectador();
+            espectadores.add(espectador1);
             
-            System.out.printf("Vamos a sentar a: %s de %d años y que tiene %.2f€ \n"
-                    ,e.getNombre(),e.getEdad(),e.getDinero());
+            System.out.printf("Vamos a sentar a: %s de %d años y que tiene %.2f€ \n "
+                    ,espectador1.getNombre(),espectador1.getEdad(),espectador1.getDinero());
             
-            if(s1.haySitio()){
+            if(sala1.haySitio()){
                 
-                if(s1.sePuedeSentar(e)){
-                    s1.sentar(espectadores.get(k));
+                if(sala1.sePuedeSentar(espectador1)){
+                    sala1.sentar(espectadores.get(k));
                 }else{
-                    System.out.println("No puede entrar en la sala");
+                    System.out.printf(" ---> No puede entrar en la sala \n");
                 }
                 
             }else{
                 System.out.println("No hay sitio");
-            }            
+            }
+            System.out.println("");
         }
         
         System.out.println("\t> Clase Espectador | Método constructor| Creación de tantos espectadores como "
@@ -74,11 +76,14 @@ public class Main {
         System.out.println("\t> Clase Espectador | Método pagar| Resta el precio"
                 + " de la entrada del dinero del espectador");
         
+        System.out.println("");
+        System.out.println("------ DISPOSICÓN DE LA SALA ------");
+        System.out.println("");
         for (int k = 0; k < i; k++) {
             for (int l = 0; l < j; l++) {
                 char [] letra = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S'};
-                if(s1.getAsiento(k,letra[l]).ocupado()){
-                    System.out.printf("(%d- %c)| %10s |",k,letra[l],s1.getAsiento(k, letra[l]).getEspec().getNombre());
+                if(sala1.getAsiento(k,letra[l]).ocupado()){
+                    System.out.printf("(%d- %c)| %10s |",k,letra[l],sala1.getAsiento(k, letra[l]).getEspec().getNombre());
                 }else{
                     System.out.printf("(%d- %c)| %10s |",k,letra[l],"Vacío");
                 }
