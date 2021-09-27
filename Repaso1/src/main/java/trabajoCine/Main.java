@@ -56,9 +56,9 @@ public class Main {
             if(s1.haySitio()){
                 
                 if(s1.sePuedeSentar(e)){
-                   s1.sentar(espectadores.get(k));
+                    s1.sentar(espectadores.get(k));
                 }else{
-                     System.out.println("No hemos podido sentarle");
+                    System.out.println("No puede entrar en la sala");
                 }
                 
             }else{
@@ -77,11 +77,13 @@ public class Main {
         for (int k = 0; k < i; k++) {
             for (int l = 0; l < j; l++) {
                 char [] letra = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S'};
-                
-                System.out.printf("(%d- %c)| %12s |",k,letra[l],s1.getAsiento(k, letra[l]).getEspec().getNombre());
+                if(s1.getAsiento(k,letra[l]).ocupado()){
+                    System.out.printf("(%d- %c)| %10s |",k,letra[l],s1.getAsiento(k, letra[l]).getEspec().getNombre());
+                }else{
+                    System.out.printf("(%d- %c)| %10s |",k,letra[l],"Vacío");
+                }
                 
             }
-            System.out.println(" ");
             System.out.println(" ");
         }
 

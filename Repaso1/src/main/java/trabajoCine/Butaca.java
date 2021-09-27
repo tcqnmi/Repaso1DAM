@@ -5,7 +5,7 @@ public class Butaca {
     
     private int fila = 0;
     private char columna = ' ';
-    private Espectador espec = new Espectador("vacío");
+    private Espectador espec;
 
     public Butaca() {
     }
@@ -47,7 +47,7 @@ public class Butaca {
     
     public boolean ocupado(){
         
-        return espec.getNombre().equals("No asignado");       
+        return this.espec != null;       
     }
     
 }
