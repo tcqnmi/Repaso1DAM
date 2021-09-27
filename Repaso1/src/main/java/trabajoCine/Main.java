@@ -50,10 +50,18 @@ public class Main {
             Espectador e = new Espectador();
             espectadores.add(e);
             
-            if(!s1.haySitio()){
+            System.out.println("Vamos a sentar a: "+e.getNombre()+" de "+e.getEdad()+" años"
+                    + " y que tiene "+e.getDinero()+"€");
+            
+            if(s1.haySitio()){
                 
-                s1.sentar(espectadores.get(k));
-                espectadores.get(k).pagar(precio);
+                if(s1.sePuedeSentar(e)){
+                   s1.sentar(espectadores.get(k));
+                   espectadores.get(k).pagar(precio);
+                }else{
+                     System.out.println("No hemos podido sentarle");
+                }
+                
             }else{
                 System.out.println("No hay sitio");
             }            
@@ -70,7 +78,8 @@ public class Main {
         for (int k = 0; k < i; k++) {
             for (int l = 0; l < j; l++) {
                 char [] letra = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S'};
-                System.out.printf("| %12s |",s1.getAsiento(k, letra[l]).getEspec().getNombre());
+                
+                System.out.printf("(%d- %c)| %12s |",k,letra[l],s1.getAsiento(k, letra[l]).getEspec().getNombre());
                 
             }
             System.out.println(" ");

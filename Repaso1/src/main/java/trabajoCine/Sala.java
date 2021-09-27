@@ -31,15 +31,16 @@ public class Sala {
     
     
     public boolean haySitio(){
+       boolean sw = false;
        for (int i = 0; i < asientos.size(); i++) {
             if(asientos.get(i).ocupado()){
                 //Continua sin realizar nada
             } else {
-                return true;  
+                sw = true;  
             }
             
         }
-        return false;
+        return sw;
     }
     
     public boolean haySitioEnButaca(int fila,char letra){
@@ -60,23 +61,14 @@ public class Sala {
         
         }
         
-        return true;
+        return false;
     }
     
     public void sentar(Espectador e){
         
         Random rnd = new Random();
         int pos = rnd.nextInt(asientos.size());
-       
-        if(sePuedeSentar(e)){
-            if(asientos.get(pos).ocupado()){
-                asientos.get(pos).setEspec(e);
-                 
-                
-                
-            }         
-        }
-          
+       asientos.get(pos).setEspec(e);          
     }
     
     public Butaca getAsiento(int fila, char col){

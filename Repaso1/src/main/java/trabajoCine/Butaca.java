@@ -47,12 +47,7 @@ public class Butaca {
     
     public boolean ocupado(){
         
-        if (espec.getNombre() == null){
-             return false;
-
-        }else{
-            return true;
-        }       
+        return espec.getNombre().equals("No asignado");       
     }
     
 }

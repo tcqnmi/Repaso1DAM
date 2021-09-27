@@ -58,7 +58,7 @@ public class Espectador {
     }
     
     public boolean tieneDinero(double cantidad){
-        return this.dinero>=dinero;
+        return this.dinero>=cantidad;
     }
     
     public void pagar (double cantidad) {
