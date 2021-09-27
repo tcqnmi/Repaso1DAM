@@ -53,16 +53,19 @@ public class Sala {
         return false;
     }
     
-    public boolean sePuedeSentar(Espectador e){
+    public boolean sePuedeSentar(Espectador espectador){
     
-        return haySitio() && e.tieneEdad(peli.getEdadMin()) && e.tieneDinero(this.precio);
+        return haySitio() && espectador.tieneEdad(this.peli.getEdadMin()) && espectador.tieneDinero(this.precio);
     }
     
-    public void sentar(Espectador e){
+    public void sentar(Espectador espectador){
         
         Random rnd = new Random();
         int pos = rnd.nextInt(asientos.size());
-       asientos.get(pos).setEspec(e);          
+        if(!asientos.get(pos).ocupado()){
+            asientos.get(pos).setEspec(espectador);   
+            espectador.pagar(this.precio);
+        }
     }
     
     public Butaca getAsiento(int fila, char col){

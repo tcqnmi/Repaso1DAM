@@ -50,14 +50,13 @@ public class Main {
             Espectador e = new Espectador();
             espectadores.add(e);
             
-            System.out.println("Vamos a sentar a: "+e.getNombre()+" de "+e.getEdad()+" años"
-                    + " y que tiene "+e.getDinero()+"€");
+            System.out.printf("Vamos a sentar a: %s de %d años y que tiene %.2f€ \n"
+                    ,e.getNombre(),e.getEdad(),e.getDinero());
             
             if(s1.haySitio()){
                 
                 if(s1.sePuedeSentar(e)){
                    s1.sentar(espectadores.get(k));
-                   espectadores.get(k).pagar(precio);
                 }else{
                      System.out.println("No hemos podido sentarle");
                 }
