@@ -1,8 +1,12 @@
 trabajoCine\Pelicula.class
 repasoPOO\Dni.class
 dam\Ex2.class
+Herencia\Main.class
+Herencia\Vehiculo.class
 trabajoCine\Butaca.class
 dam\Ex1.class
+Herencia\Coche.class
+Herencia\Helicoptero.class
 dam\Ex5.class
 trabajoCine\Espectador.class
 dam\Ex4.class
@@ -11,3 +15,4 @@ repasoPOO\Main.class
 dam\Ex3.class
 repasoPOO\Persona.class
 trabajoCine\Main.class
+Herencia\Moto.class
