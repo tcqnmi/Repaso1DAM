@@ -11,22 +11,26 @@ public class Helicoptero extends Vehiculo {
     }
     
     public void despegar(){
-        System.out.println(super.getNombre()+" despega");
-        enElAire = true;
-        System.out.printf(" %s",enElAire?"Volando":"enTierra");
-        
+        if(!this.enElAire){
+            System.out.println(this.getNombre()+" despega");
+            enElAire = true;
+        }else{
+            System.out.println(this.getNombre()+" ya está en el aire");
+        }        
     }
     
     public void aterrizar(){
-        System.out.println(super.getNombre()+" aterriza");
-        enElAire = false;
-        System.out.printf(" %s",enElAire?"Volando":"enTierra");
-
+        if(this.enElAire){
+            System.out.println(this.getNombre()+" aterriza");
+            enElAire = false;
+        }else{
+             System.out.println(this.getNombre()+" ya está en el suelo");
+        }
     }
     
     @Override
     public void arrancar(){
-        System.out.println(super.getNombre()+" arranca el hélice");
+        System.out.println(this.getNombre()+" arranca el hélice");
     }
 
     public int getTamanoHelice() {

@@ -14,12 +14,12 @@ public class Coche extends Vehiculo {
     }
     
     public void abrirPuertas(){
-        System.out.println(super.getNombre()+" abre sus puertas");
+        System.out.println(this.getNombre()+" abre sus puertas");
     }
     
     @Override
     public void arrancar(){
-        System.out.println(super.getNombre()+" arranca el motor del coche");
+        System.out.println(this.getNombre()+" arranca el motor del coche");
     }
 
     public String getMatricula() {
