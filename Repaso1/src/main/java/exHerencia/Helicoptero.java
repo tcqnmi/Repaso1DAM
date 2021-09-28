@@ -1,4 +1,4 @@
-package Herencia;
+package exHerencia;
 
 public class Helicoptero extends Vehiculo {
     

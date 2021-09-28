@@ -1,5 +1,5 @@
 
-package Herencia;
+package exHerencia;
 
 
 public class Vehiculo {

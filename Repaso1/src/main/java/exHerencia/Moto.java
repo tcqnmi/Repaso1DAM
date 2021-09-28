@@ -1,4 +1,4 @@
-package Herencia;
+package exHerencia;
 
 public class Moto extends Vehiculo{
     
@@ -10,13 +10,13 @@ public class Moto extends Vehiculo{
     }
     
     public void hacerCaballito(){
-        System.out.println(super.getNombre()+" hace un caballito");
+        System.out.println(this.getNombre()+" hace un caballito");
     }
     
     
     @Override
     public void arrancar(){
-        System.out.println(super.getNombre()+" arranca el motor de la moto");
+        System.out.println(this.getNombre()+" arranca el motor de la moto");
     }
 
     public String getMatricula() {

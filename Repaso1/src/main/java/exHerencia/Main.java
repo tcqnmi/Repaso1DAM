@@ -1,4 +1,4 @@
-package Herencia;
+package exHerencia;
 
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -72,6 +72,12 @@ public class Main {
         
         for (int i = 0; i <vehiculos.size() ; i++) {
             vehiculos.get(i).arrancar();
+            if(vehiculos.get(i).getClass() == Helicoptero.class){
+                ((Helicoptero)vehiculos.get(i)).despegar();
+            //Conversión del objeto vehiculo en esa posicion como a un objeto Helicoptero
+            //Como tenemos distintos tipos de objetos dentro de vehiculos no todos son Helicopteros
+            //Por tanto necesitamos comparar si la clase es Helicoptero antes de tratarlo como tal
+            }
         }
         
 
