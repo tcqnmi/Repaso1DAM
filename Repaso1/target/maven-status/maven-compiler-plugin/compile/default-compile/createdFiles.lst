@@ -1,6 +1,8 @@
 trabajoCine\Pelicula.class
 repasoPOO\Dni.class
+ciudad\Casa.class
 dam\Ex2.class
+ciudad\Persona.class
 exHerencia\Vehiculo.class
 trabajoCine\Butaca.class
 dam\Ex1.class
@@ -11,10 +13,12 @@ trabajoCine\Espectador.class
 dam\Ex4.class
 exHerencia\Coche.class
 plantas\Planta.class
+ciudad\Ciudad.class
 trabajoCine\Sala.class
 repasoPOO\Main.class
 dam\Ex3.class
 repasoPOO\Persona.class
+ciudad\Main.class
 plantas\Main.class
 trabajoCine\Main.class
 exHerencia\Moto.class

@@ -130,8 +130,7 @@ public class Planta {
             gen2Hijo= planta2.gen2;
         }
         
-        Planta plantaHija = new Planta (gen1Hijo, gen2Hijo);
-        return plantaHija;
+        return new Planta (gen1Hijo, gen2Hijo);
     }
     
 }
