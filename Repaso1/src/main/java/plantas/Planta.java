@@ -1,5 +1,7 @@
 package plantas;
 
+import java.util.Random;
+
 public class Planta {
     
     private String gen1;
@@ -107,7 +109,28 @@ public class Planta {
     }
     
     public Planta reproduirCon(Planta planta2){
-        Planta plantaHija = new Planta (this.gen1, planta2.gen2);
+        
+        Random rnd = new Random();
+        
+        int aleatorioGen1 = rnd.nextInt(1);
+        String gen1Hijo;
+        String gen2Hijo;
+        
+        if(aleatorioGen1 == 0){
+            gen1Hijo = this.gen1;
+        }else{
+            gen1Hijo= planta2.gen1;
+        }
+        
+        int aleatorioGen2 = rnd.nextInt(1);
+        
+        if(aleatorioGen2 == 0){
+            gen2Hijo = this.gen2;
+        }else{
+            gen2Hijo= planta2.gen2;
+        }
+        
+        Planta plantaHija = new Planta (gen1Hijo, gen2Hijo);
         return plantaHija;
     }
     
