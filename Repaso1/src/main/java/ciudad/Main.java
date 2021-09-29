@@ -93,8 +93,6 @@ public class Main {
             System.out.println("No puede entrar en la casa, no hay espacio");
         }
         
-      
-        
         System.out.printf("\nOcupantes de la casa 1:");
         casa1.mostrarOcupantes();
         System.out.printf("\nOcupantes de la casa 2:");
@@ -102,22 +100,18 @@ public class Main {
         System.out.printf("\nOcupantes de la casa 3:");
         casa3.mostrarOcupantes();
         
-        System.out.printf("\nHabitantes totales de la ciudad %S : %d \n", ciudad1.getNombre(), ciudad1.numeroDeHabitantes());
-        System.out.printf("\nHabitantes totales de la ciudad %S : %d \n", ciudad2.getNombre(), ciudad2.numeroDeHabitantes());
+        System.out.println("");
+        System.out.printf("Habitantes totales de la ciudad %S : %d \n", ciudad1.getNombre(), ciudad1.numeroDeHabitantes());
+        System.out.printf("Habitantes totales de la ciudad %S : %d \n", ciudad2.getNombre(), ciudad2.numeroDeHabitantes());
 
+        System.out.println("");
         System.out.println("Habitantes de "+ciudad1.getNombre()+": ");
         ciudad1.mostrarPoblacion();
+        
+        System.out.println("");
         System.out.println("Habitantes de "+ciudad2.getNombre()+": ");
         ciudad2.mostrarPoblacion();
-        
-        
-        
-        
-        
-        
-        
-        
-        
+           
         
     }
     
