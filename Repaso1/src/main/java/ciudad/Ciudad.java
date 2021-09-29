@@ -44,7 +44,6 @@ public class Ciudad {
     
     public void mostrarPoblacion(){
         
-        System.out.println("Habitantes: ");
         for (int i = 0; i < viviendas.size(); i++) {
             viviendas.get(i).mostrarOcupantes();
             System.out.println(" ");

@@ -62,12 +62,38 @@ public class Main {
         
         System.out.println(" Añadimos a las personas en casas");
         
-        casa1.meterPersonas(p1);
-        casa1.meterPersonas(p2);
-        casa2.meterPersonas(p3);
-        casa3.meterPersonas(p4);
-        casa3.meterPersonas(p5);
-        casa3.meterPersonas(p6);
+        if(casa1.meterPersonas(p1)){
+            System.out.println("Persona añadida");
+        }else{
+            System.out.println("No puede entrar en la casa, no hay espacio");
+        }
+        if(casa1.meterPersonas(p2)){
+            System.out.println("Persona añadida");
+        }else{
+            System.out.println("No puede entrar en la casa, no hay espacio");
+        }
+        if(casa2.meterPersonas(p3)){
+            System.out.println("Persona añadida");
+        }else{
+            System.out.println("No puede entrar en la casa, no hay espacio");
+        }
+        if(casa3.meterPersonas(p4)){
+            System.out.println("Persona añadida");
+        }else{
+            System.out.println("No puede entrar en la casa, no hay espacio");
+        }
+        if(casa3.meterPersonas(p5)){
+            System.out.println("Persona añadida");
+        }else{
+            System.out.println("No puede entrar en la casa, no hay espacio");
+        }
+        if(casa3.meterPersonas(p6)){
+            System.out.println("Persona añadida");
+        }else{
+            System.out.println("No puede entrar en la casa, no hay espacio");
+        }
+        
+      
         
         System.out.printf("\nOcupantes de la casa 1:");
         casa1.mostrarOcupantes();
